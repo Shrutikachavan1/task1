@@ -1,6 +1,5 @@
 const http = require('http');
 const fs=require('fs');
-const e = require('express');
 const PORT=9999;
 
 const server=http.createServer((req,res)=>{
@@ -43,8 +42,7 @@ const server=http.createServer((req,res)=>{
           
             res.write(`<html><body><h2 style='color:blue; text-align: center;margin-top: 32px;     height: 73px;padding-top: 40;height: 58px; width: 80%; 
             margin-left: 150px;border-radius: 20px;background-color: #38a89e8a';>${data.toString()}</h2></body></html>`);
-          
-
+            res.end()
         }
         else{
             
